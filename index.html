@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <title>julienb777.github.io</title>
+  <style>
+    body {
+      font-family: serif;
+      color: black;
+      background-color: white;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .visible {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="fr" onclick="translatePage()">
+    <p><i>Click to translate</i></p>
+    <h1>MOI</h1>
+    <p>Aussi loin que remonte ma mémoire, j'ai toujours bricolé, l'électronique
+      a toujours été très accessible, c'est donc sans surprise que dès l'adolescence j'eusse
+      réalisé nombre de petits logiciels et projets variés.</p>
+    <p>Passion et profession ne riment pas toujours, c'est donc pourquoi
+      j'ai passé beaucoup de temps à faire autre chose que ma passion : créer.</p>
+    <p>Maintenant que j'ai compris que la liberté n'était qu'une question de choix,
+      me voici développeur d'applications.</p>
+    <p>Ce site est mis à jour de temps en temps, n'hésitez pas à profiter de ce qui est disponible ici.</p>
+  </div>
+
+  <div id="en" onclick="translatePage()">
+    <p><i>Cliquez pour traduire</i></p>
+    <h1>ME</h1>
+    <p>Once upon a time, there was a crafter, an electronic crafter. From teenage to forever I loved
+      hacking stuffs; electronic were widely accessible to me. That's not a surprise; I made much
+      softwares from teenage to now.</p>
+    <p>Unfortunately, we almost work for money, not hobbies, that's why I spent most of my professionnal
+      career doing something I didn't really vibe with.</p>
+    <p>Freedom comes from acts, here I am now as an applications developer.</p>
+    <p>This website aims to be updated from time to time, enjoy all the stuffs I put online.</p>
+  </div>
+  <script>
+    // START Easy translation method
+    translated = false;
+    function translatePage() {
+      if (translated) {
+        document.getElementById("fr").classList.add("hidden");
+        document.getElementById("fr").classList.remove("visible");
+        document.getElementById("en").classList.add("visible");
+        document.getElementById("en").classList.remove("hidden");
+        translated = false;
+      } else {
+        document.getElementById("en").classList.add("hidden");
+        document.getElementById("en").classList.remove("visible");
+        document.getElementById("fr").classList.add("visible");
+        document.getElementById("fr").classList.remove("hidden");
+        translated = true;
+      };
+    };
+    translatePage();
+    // END Easy translation method
+  </script>
+</body>
+
+</html>
